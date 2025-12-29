@@ -54,3 +54,21 @@ SELECT *
 FROM customer;
 SELECT * 
 FROM Employee;
+# Counting the number of customer per each sales represent
+SELECT e.FirstName,e.LastName, count(c.SupportRepId) as total_count_of_customer
+FROM customer c 
+LEFT JOIN employee e
+on c.SupportRepId = e.EmployeeId
+group by c.SupportRepId;
+# Invoice of Customer
+SELECT c.CustomerId,c.FirstName,c.LastName ,sum(i.Total) as Bill_Amount
+FROM customer c
+LEFT JOIN invoice i
+on c.CustomerId = i.InvoiceId
+GROUP BY i.CustomerId,c.CustomerId;
+# Total track sell 
+SELECT t.name, sum(i.Quantity) as total_quantity,sum(i.UnitPrice) as Total_Price
+FROM invoiceline i
+JOIN track t 
+on i.TrackId = t.TrackId
+GROUP by i.TrackId,t.TrackId;
