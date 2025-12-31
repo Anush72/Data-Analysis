@@ -17,3 +17,31 @@ on c.CustomerID = i.CustomerId
 GROUP BY c.CustomerId,c.FirstName,c.LastName
 ORDER BY Invoice_Count DESC
 LIMIT 3;
+# show each invoice with customer name, employee(support rep) name and invoice total
+SELECT c.FirstName,c.LastName,e.FirstName as Support_Sale_Name,sum(i.Total) as invoice_total
+from customer c
+LEFT JOIN employee e
+on c.SupportRepId = e.EmployeeId
+LEFT JOIN invoice i 
+on c.CustomerId = i.CustomerId
+GROUP BY c.CustomerId;
+# total sale by each employee (support representative)
+select e.FirstName,e.LastName,sum(i.Total) as total_sales
+from invoice i
+left join customer c
+on i.CustomerId = c.CustomerId
+left join employee e
+on c.SupportRepId = e.EmployeeId
+group by c.SupportRepId;
+# List of artists and the total number of tracks they have
+with artist_album as (
+	select name,artist.ArtistId,AlbumID
+    from artist 
+    left join album
+    on artist.ArtistId = album.ArtistId
+)
+select a.name,count(t.TrackId) as total_track
+from artist_album a
+left join track t 
+on a.AlbumID = t.AlbumId
+group by a.name;
