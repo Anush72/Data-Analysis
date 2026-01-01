@@ -45,3 +45,26 @@ from artist_album a
 left join track t 
 on a.AlbumID = t.AlbumId
 group by a.name;
+# countries that have equal or more than 5 customer
+select country, count(*) as number_of_customers
+from customer
+group by Country
+Having number_of_customers >= 5;
+# generes that have generated more than $100 in sales
+select g.Name,sum(i.UnitPrice * i.Quantity) as total_revenue
+from genre g 
+left join track t 
+on g.GenreId = t.GenreId
+left join invoiceline i
+on t.TrackId = i.TrackId
+group by g.GenreId
+having total_revenue > 100;
+# Customers who have spent more than the average customer sepnding
+with total_invoice as (
+select CustomerId, Sum(Total) as totalinvoice
+from invoice
+group by CustomerId
+)
+select CustomerId
+from total_invoice 
+where totalinvoice > (select avg(totalinvoice) from total_invoice);
