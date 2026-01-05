@@ -1,9 +1,4 @@
-# creating the database hello
-CREATE DATABASE hello;
-# Show thw datbase we have
-SHOW databases;
-# USE DATABASE hello
-USE  Hello;
+USE hello;
 # Create a table customer 
 CREATE table customer 
 (CustomerID INT PRIMARY KEY,
@@ -35,3 +30,15 @@ modify column Phone BIGINT;
 
 # looking at table columns and type of data
 DESCRIBE new_customer;
+# TRUNCATE the table
+CREATE TABLE EMPLOYEE (
+	EMP_ID INT(4),
+    NAME VARCHAR(20),
+    AGE INT (3),
+    DOB DATE,
+    SALARY DECIMAL (7,2)
+    );
+INSERT INTO EMPLOYEE VALUES (101,'Anush Giri',21,'1998-08-20',25000);
+INSERT INTO EMPLOYEE VALUES (102,'Chris George',27,'1996-01-29',51000);
+TRUNCATE TABLE EMPLOYEE;
+select * from EMPLOYEE;
