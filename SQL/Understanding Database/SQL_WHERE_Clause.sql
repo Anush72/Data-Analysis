@@ -26,3 +26,5 @@ WHERE Age =24;
 SELECT * 
 FROM employee
 WHERE Age >21;
+
+
