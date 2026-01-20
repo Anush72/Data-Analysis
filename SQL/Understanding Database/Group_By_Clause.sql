@@ -19,4 +19,4 @@ SELECT BillingCountry, sum(Total) as Revenue_From_Country
 FROM 
 invoice
 Group by BillingCountry
-Having Revenue_From_country >50;
+Having Revenue_From_country >50;	
