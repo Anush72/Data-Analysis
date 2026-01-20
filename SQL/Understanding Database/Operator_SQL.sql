@@ -29,3 +29,8 @@ SELECT *
 FROM customer
 WHERE FirstName Like 'R%';
 
+# Between Operator
+SELECT * 
+FROM customer 
+WHERE CustomerID Between 1 AND 5;
+
