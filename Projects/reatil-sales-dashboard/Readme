@@ -1,0 +1,15 @@
+Reatil Sales Dashboard
+This projects an interactive analysing retail sales performance,profitability and customer segements
+🛠 Tools Used
+Power BI
+Excel
+📈 Key Insights
+West region generates the highest sales
+Technology category is the top-performing segment
+Discounts have a negative impact on profit in some areas
+Consumer segment contributes the largest share of revenue
+📌 Features
+KPI cards for Sales, Profit, Quantity, Discount
+Regional and category-based analysis
+Interactive filters (Region, Category, Segment)
+Scatter analysis of Discount vs Profit
