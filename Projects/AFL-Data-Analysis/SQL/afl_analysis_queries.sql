@@ -33,7 +33,11 @@ JOIN players p on ps.player_id = p.player_id
 GROUP BY p.player_name
 ORDER BY total_disposals DESC;
 
+
+
 -- BEST Teams by Total Goals
+
+
 SELECT 
 t.team_name,
 sum(ps.goals) as total_goals
@@ -42,6 +46,9 @@ JOIN players p on ps.player_id = p.player_id
 JOIN teams t on p.team_id = t.team_id
 GROUP BY t.team_name
 ORDER BY total_goals DESC;
+
+
+
 
 -- BEST Win count per Team
 SELECT 
