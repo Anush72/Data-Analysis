@@ -1,5 +1,4 @@
--- Creating database
-CREATE DATABASE AFl;
+
 
 -- USING DATABSE
 USE AFL;
