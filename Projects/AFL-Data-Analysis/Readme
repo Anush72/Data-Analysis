@@ -1,0 +1,80 @@
+# 🏉 AFL Data Analysis Project
+
+## ✨ About This Project
+
+This project is a simple and practical analysis of AFL (Australian Football League) data.
+I worked on transforming raw match and player data into meaningful insights using SQL and Power BI.
+
+It helped me understand how real-world data is messy, and how to clean, structure, and analyze it properly.
+
+---
+
+## 🎯 What I Did
+
+* Cleaned and structured raw AFL dataset
+* Built relational tables (teams, players, matches, player stats)
+* Wrote SQL queries to explore performance
+* Created insights on teams and players
+
+---
+
+## 🧱 Data Model
+
+The data was organized into:
+
+* **Teams** → team details
+* **Players** → player info with team mapping
+* **Matches** → match-level data
+* **Player Stats** → performance per match
+
+---
+
+## 📊 Key Insights
+
+* Identified top goal scorers
+* Found most active players (based on disposals)
+* Analyzed team performance and wins
+* Explored close matches and margins
+
+---
+
+## 🛠️ Tools Used
+
+* SQL Server
+* SQL
+* Power BI
+
+---
+
+## 📁 Project Structure
+
+AFL-Project/
+│
+├── SQL/
+├── Data/
+├── PowerBI/
+
+---
+
+## 🌱 What I Learned
+
+* How to clean and structure messy data
+* Writing SQL queries using joins and aggregations
+* Thinking like a data analyst, not just coding
+
+---
+
+## 🚀 Next Steps
+
+* Add more advanced SQL analysis
+* Build a Power BI dashboard
+* Explore predictions using Python
+
+---
+
+## 👨‍💻 About Me
+
+I’m currently studying Data Analysis and building projects in SQL, Power BI, and Machine Learning.
+This project is part of my journey to becoming a data analyst.
+
+---
