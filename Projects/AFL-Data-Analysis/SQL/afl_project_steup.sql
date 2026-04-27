@@ -88,3 +88,34 @@ SELECT DISTINCT
     teamId,
     team_name
 FROM afl_raw_data;
+
+-- team_results table
+
+CREATE VIEW team_results AS
+SELECT 
+	match_id,
+	home_team_id as Team,
+	CASE
+		WHEN winner = 'home' THEN 1 ELSE 0
+	END AS win
+FROM matches
+UNION ALL
+SELECT 
+	match_id,
+	away_team_id AS team,
+	CASE 
+		WHEN winner = 'away' THEN 1 ELSE 0
+	END as win
+FROM matches;
+
+-- Creating the total wins of team
+CREATE VIEW team_total_wins AS
+SELECT 
+    t.team_name,
+    SUM(tr.win) AS total_wins
+FROM team_results tr
+JOIN teams t 
+    ON tr.team = t.team_id
+GROUP BY t.team_name;
+
+SELECT * FROM team_total_wins;
