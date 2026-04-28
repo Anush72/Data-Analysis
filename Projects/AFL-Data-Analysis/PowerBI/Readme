@@ -1,0 +1,33 @@
+# AFL Data Analysis Project
+
+## Overview
+This project analyzes AFL match and player data using SQL Server and Power BI.
+
+## Tools Used
+- SQL Server (data cleaning and transformation)
+- Power BI (data visualization and dashboard)
+
+## Data Model
+- Teams
+- Players
+- Matches
+- Player Statistics
+
+## Key Features
+- KPI overview (Total Matches, Teams, Players, Goals)
+- Top 5 teams by wins, goals, and tackles
+- Top 5 players by goals, tackles, and performance
+- Venue-based analysis
+- Interactive filters (Team and Venue)
+
+## Key Insights
+- High-scoring teams are not always the most successful in terms of wins
+- A small number of players dominate performance metrics
+- Venue has an impact on scoring trends
+
+## Dashboard
+(Add your screenshot here)
+
+## Future Improvements
+- Add advanced analytics (efficiency metrics)
+- Include time-based trends
